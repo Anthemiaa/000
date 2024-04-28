@@ -142,7 +142,27 @@
       
       var BLOOKETCHEAT = document.getElementById("BLOOKETCHEAT");
   BLOOKETCHEAT.addEventListener("click", function(event) {
-    navigator.clipboard.writeText("downloads/blooket"); 
+    fetch('downloads/blooket')
+        .then(response => {
+          // Check if the request was successful
+          if (!response.ok) {
+            throw new Error('Failed to fetch file.');
+          }
+          // Return the response text
+          return response.text();
+        })
+        .then(content => {
+          // Copy the content to the clipboard
+          return navigator.clipboard.writeText(content);
+        })
+        .then(() => {
+          // Alert the user
+          alert("Content copied to clipboard!");
+        })
+        .catch(error => {
+          console.error("Failed to copy content:", error);
+          alert("Failed to copy content.");
+        });
     window.location.href = 'downloads/instructions.txt';
   });
 
