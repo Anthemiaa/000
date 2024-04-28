@@ -9,128 +9,225 @@
         color: #fff;
         text-align: center;
       }
-      .footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
-      }
-      .box {
-        background-color: #333;
-        color: #fff;
+      box {
+        border: none;
         padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        margin: 10px;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #333;
         max-width: 500px;
         width: 100%;
         box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        max-height: 600px;
       }
-      .button {
-        width: 150px;
-        height: 40px;
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+      boxTop {
         border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: #007bff;
-        color: #fff;
-        margin: 10px;
-        transition: background-color 0.3s ease;
+        padding: 10px;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #333;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       }
-      .button:hover {
-        background-color: #0056b3;
+      boxLeft {
+        border: none;
+        padding: 30px;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #333;
+        max-width: 500px;
+        width: 160px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        height: 300px;
+        margin-left: -10px;
+        margin-top: 45px;
+      }
+      boxSmall {
+        border: none;
+        padding: 3px;
+        margin: 10px;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #333;
+        max-width: 200px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        float: left;
       }
       .textstyles {
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 20px;
-      }
-      .textstyles1 {
+        color: white;
+        text-shadow: 2px 2px 4px #fff;
         font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
-        margin-top: 20px;
+      }
+      .textstyles2 {
+        color: white;
+        top: 10px;
+        left: 5px;
+        text-shadow: 2px 2px 4px #fff;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .textstyles1 {
+        color: white;
+        font-size: 0.1px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .search-bar {
+        border-radius: 5px;
+        padding: 10px;
+        border: none;
+        background-color: #444;
+        color: #fff;
+        margin-right: 10px;
+        width: 200px;
       }
       .ColorRed {
+        text-shadow: 2px 5px 4px red;
         color: red;
       }
       .ColorMagenta {
         color: magenta;
+        text-shadow: 2px 5px 4px magenta;
+      }
+      img {
+        margin-top: 0px;
+      }
+      .wrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .button {
+        width: 130px;
+        height: 30px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+      }
+      .button:hover {
+        background-color: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+      }
+      .circle-btn {
+        border-radius: 50%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+        width: 30px;
+        height: 30px;
+        float: left;
+        transition: all 0.6s ease;
+      }
+      .circle-btn:hover {
+        rotate: 90deg;
+        animation: joinin 1.5s ease;
+      }
+      @keyframes joinin {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.1;
+        }
+        20% {
+          opacity: 0.2;
+        }
+        30% {
+          opacity: 0.3;
+        }
+        40% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        60% {
+          opacity: 0.6;
+        }
+        70% {
+          opacity: 0.7;
+        }
+        80% {
+          opacity: 0.8;
+        }
+        90% {
+          opacity: 0.9;
+        }
+        100% {
+          opacity: 1;
+        }
       }
     </style>
   </head>
   <body>
-    <footer class="footer">
-      <p>This site is made by [Your Name]. &copy; 2024</p>
-      <p>Site Info: [Add your site information here]</p>
-    </footer>
-    <div class="wrap">
-      <div class="box">
-        <div>
-          <h1 class="textstyles">Popular Cheats</h1>
-          <div class="boxSmall">
+    <div>
+      <boxTop>
+        <!-- Removed button -->
+      </boxTop>
+    </div>
+    <boxLeft>
+      <div>
+        <hi class="textstyles2"><ColorRed>Pages</ColorRed></hi>
+      </div>
+      <div style="margin-top: 10px;">
+        <a href="AllMods.php" class="RightBtn">Mods uploaded</a>
+      </div>
+      <div style="margin-top: 10px;">
+        <a href="fr.php" class="RightBtn">Upload mods</a>
+      </div>
+    </boxLeft>
+    <box>
+      <div>
+        <hi class="textstyles"><ColorMagenta>Popular</ColorMagenta> <ColorRed> mods</ColorRed></hi>
+      </div>
+      <div>
+        <boxSmall> 
+          <div>
             <img src="images/download.jpg" alt="icon" width="80" height="60">
             <div>
-              <h2 class="textstyles">Better Monke Mod</h2>
+              <hi class="textstyles">Better Monke Mod</hi>
             </div>
             <div>
               <button class="button" id="MonkeyModManager">Download</button>
             </div>
           </div>
-          <div class="boxSmall">
-            <img src="images/download.jpg" alt="icon" width="80" height="60">
-            <div>
-              <h2 class="textstyles">Satire</h2>
-            </div>
-            <div>
-              <button class="button" id="Satire">Download</button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="boxSmall">
-            <img src="images/download.jpg" alt="icon" width="80" height="60">
-            <div>
-              <h2 class="textstyles">Unheard (Eyerock)</h2>
-            </div>
-            <div>
-              <button class="button" id="EyeCOCK">Download</button>
-            </div>
-          </div>
-          <div class="boxSmall">
-            <img src="images/download.jpg" alt="icon" width="80" height="60">
-            <div>
-              <h2 class="textstyles">Satire</h2>
-            </div>
-            <div>
-              <button class="button" id="Satire">Download</button>
-            </div>
-          </div>
-        </div>
+        </boxSmall>
       </div>
-    </div>
-    <script>
-      var MonkeyModManager = document.getElementById("MonkeyModManager");
-      MonkeyModManager.addEventListener("click", function(event) {
-        window.location.href = 'https://objects.githubusercontent.com/github-production-release-asset-2e65be/663129656/b258af79-b4b9-4011-bec8-244dc7a73ca9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230709T045401Z&X-Amz-Expires=300&X-Amz-Signature=ae1533c6cb513c821da1d1324170ca3bac0717c5f0cd79d2c0cf07da4b9bbd53&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=663129656&response-content-disposition=attachment%3B%20filename%3DBetterMonkeModManager.exe&response-content-type=application%2Foctet-stream';
-      });
-
-      var Satire = document.getElementById("Satire");
-      Satire.addEventListener("click", function(event) {
-        window.location.href = 'https://cdn.discordapp.com/attachments/1086892923733422183/1100647020181602384/SatireGhostClient.dll';
-      });
-
-      var EyeCOCK = document.getElementById("EyeCOCK");
-      EyeCOCK.addEventListener("click", function(event) {
-        window.location.href = 'https://cdn.discordapp.com/attachments/1095081838206267484/1108575402265428059/EyecockMenu.zip';
-      });
-    </script>
+      <!-- Repeat for other mods -->
+    </box>
+    <p style="font-size: 1px;">Visit <a href="https://gorillatagcheats.com/PP">privacy policy</a></p>
   </body>
 </html>
