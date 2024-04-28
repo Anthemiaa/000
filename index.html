@@ -12,56 +12,16 @@
       box {
         border: none;
         padding: 30px;
-        margin: 10px;
+        margin: 10px auto;
         display: inline-block;
         vertical-align: top;
         background-color: #333;
-        max-width: 500px;
+        max-width: 800px;
         width: 100%;
         box-sizing: border-box;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         max-height: 600px;
-      }
-      boxTop {
-        border: none;
-        padding: 10px;
-        display: inline-block;
-        vertical-align: top;
-        background-color: #333;
-        width: 100%;
-        box-sizing: border-box;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      }
-      boxLeft {
-        border: none;
-        padding: 30px;
-        display: inline-block;
-        vertical-align: top;
-        background-color: #333;
-        max-width: 500px;
-        width: 160px;
-        box-sizing: border-box;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        height: 300px;
-        margin-left: -10px;
-        margin-top: 45px;
-      }
-      boxSmall {
-        border: none;
-        padding: 3px;
-        margin: 10px;
-        display: inline-block;
-        vertical-align: top;
-        background-color: #333;
-        max-width: 200px;
-        width: 100%;
-        box-sizing: border-box;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        float: left;
       }
       .textstyles {
         color: white;
@@ -69,44 +29,12 @@
         font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
       }
-      .textstyles2 {
-        color: white;
-        top: 10px;
-        left: 5px;
-        text-shadow: 2px 2px 4px #fff;
-        font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .textstyles1 {
-        color: white;
-        font-size: 0.1px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .search-bar {
-        border-radius: 5px;
-        padding: 10px;
-        border: none;
-        background-color: #444;
-        color: #fff;
-        margin-right: 10px;
-        width: 200px;
-      }
-      .ColorRed {
-        text-shadow: 2px 5px 4px red;
-        color: red;
-      }
       .ColorMagenta {
         color: magenta;
         text-shadow: 2px 5px 4px magenta;
       }
       img {
         margin-top: 0px;
-      }
-      .wrap {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
       .button {
         width: 130px;
@@ -131,103 +59,50 @@
         color: #fff;
         transform: translateY(-7px);
       }
-      .circle-btn {
-        border-radius: 50%;
-        font-family: 'Roboto', sans-serif;
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 2.5px;
-        font-weight: 500;
-        color: #000;
-        background-color: #fff;
+      .boxSmall {
         border: none;
-        border-radius: 45px;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease 0s;
-        cursor: pointer;
-        outline: none;
-        width: 30px;
-        height: 30px;
+        padding: 30px;
+        margin: 10px;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #333;
+        max-width: 200px;
+        width: 30%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         float: left;
-        transition: all 0.6s ease;
       }
-      .circle-btn:hover {
-        rotate: 90deg;
-        animation: joinin 1.5s ease;
-      }
-      @keyframes joinin {
-        0% {
-          opacity: 0;
-        }
-        10% {
-          opacity: 0.1;
-        }
-        20% {
-          opacity: 0.2;
-        }
-        30% {
-          opacity: 0.3;
-        }
-        40% {
-          opacity: 0.4;
-        }
-        50% {
-          opacity: 0.5;
-        }
-        60% {
-          opacity: 0.6;
-        }
-        70% {
-          opacity: 0.7;
-        }
-        80% {
-          opacity: 0.8;
-        }
-        90% {
-          opacity: 0.9;
-        }
-        100% {
-          opacity: 1;
-        }
+      .wrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     </style>
   </head>
   <body>
     <div>
-      <boxTop>
-        <!-- Removed button -->
-      </boxTop>
-    </div>
-    <boxLeft>
-      <div>
-        <hi class="textstyles2"><ColorRed>Pages</ColorRed></hi>
-      </div>
-      <div style="margin-top: 10px;">
-        <a href="AllMods.php" class="RightBtn">Mods uploaded</a>
-      </div>
-      <div style="margin-top: 10px;">
-        <a href="fr.php" class="RightBtn">Upload mods</a>
-      </div>
-    </boxLeft>
-    <box>
-      <div>
-        <hi class="textstyles"><ColorMagenta>Popular</ColorMagenta> <ColorRed> mods</ColorRed></hi>
-      </div>
-      <div>
-        <boxSmall> 
-          <div>
-            <img src="images/download.jpg" alt="icon" width="80" height="60">
+      <box>
+        <div>
+          <hi class="textstyles"><span class="ColorMagenta">Popular</span> <span class="ColorRed"> Mods</span></hi>
+        </div>
+        <div>
+          <div class="boxSmall"> 
             <div>
-              <hi class="textstyles">Better Monke Mod</hi>
-            </div>
-            <div>
-              <button class="button" id="MonkeyModManager">Download</button>
+              <img src="images/download.jpg" alt="icon" width="80" height="60">
+              <div>
+                <hi class="textstyles">Better Monke Mod</hi>
+              </div>
+              <div>
+                <button class="button" id="MonkeyModManager">Download</button>
+              </div>
             </div>
           </div>
-        </boxSmall>
-      </div>
-      <!-- Repeat for other mods -->
-    </box>
+          <!-- Repeat for other mods -->
+        </div>
+      </box>
+    </div>
     <p style="font-size: 1px;">Visit <a href="https://gorillatagcheats.com/PP">privacy policy</a></p>
   </body>
 </html>
