@@ -1,120 +1,136 @@
 @import url("https://fonts.googleapis.com/css?family=IBM%20Plex%20Sans:500|IBM%20Plex%20Sans:300");
 
-:root {
-  --m: 4rem;
-}
-
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
+/* Global styles */
 body {
-  background-color: black;
-  color: white;
-  font-family: "IBM Plex Sans";
-  font-weight: 300;
-
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  height: 190vh;
-  margin: 0;
-  color: #d5d5d5;
-  font-size: calc(0.3 * var(--m));
-}
-
-h2 {
-  font-weight: 500;
-  text-align: center;
-  font-size: var(--m);
+  background-color: #f5f5f5; /* Light gray background */
+  font-family: "IBM Plex Sans", sans-serif;
   margin: 0;
 }
 
-h3 {
-  font-weight: 500;
-  font-size: calc(0.6 * var(--m));
-  margin: 0;
-}
-
+/* Card container */
 .card-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
 }
 
+/* Individual card */
 .card {
-  height: calc(8 * var(--m));
-  width: calc(28%);
-  background: linear-gradient(120deg, #ff8064, #725bdc);
-  color: black;
-  border-radius: calc(0.5 * var(--m));
-  overflow: hidden;
-  position: relative;
+  width: calc(30% - 20px); /* Adjusted width for smaller cards */
+  background-color: white; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .card img {
   width: 100%;
-  height: 60%;
-  object-fit: cover;
+  height: auto;
+  border-top-left-radius: 8px; /* Rounded top corners for the image */
+  border-top-right-radius: 8px;
 }
 
 .content {
-  padding: 1rem;
+  padding: 20px;
+}
+
+h2 {
+  margin: 0 0 10px; /* Add space below the title */
+  font-size: 1.5rem; /* Larger font size for title */
+}
+
+p {
+  margin: 0 0 20px; /* Add space below paragraphs */
+  font-size: 1rem; /* Adjust font size */
+  color: #666; /* Dark gray text color */
 }
 
 button.download-button {
-  background-color: #000;
-  font-size: calc(0.4 * var(--m));
+  background-color: #4CAF50; /* Green download button */
+  color: white;
   border: none;
-  color: #e5e5e5;
-  font-family: "IBM Plex Sans";
-  font-weight: 400;
-  padding: calc(0.35 * var(--m)) calc(0.8 * var(--m));
-  border-radius: calc(0.3 * var(--m));
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto; /* Center the button */
+  transition: background-color 0.3s;
 }
 
-footer {
-  margin-top: 80vh;
-  z-index: 500;
-  width: 100%;
-  height: 100vh;
+button.download-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Footer */
+#footer {
+  background-color: #333; /* Dark background color */
+  color: #ddd; /* Light text color */
+  padding: 50px 0; /* Vertical padding */
+}
+
+.footer-container {
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Center the footer */
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  padding: 5rem 2vw;
-  position: relative;
+  justify-content: space-between;
 }
 
-footer::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0) 5%,
-    rgba(0, 0, 0, 0.3) 20%,
-    rgba(0, 0, 0, 0.6) 30%,
-    rgba(0, 0, 0, 0.8) 40%,
-    rgba(0, 0, 0, 1) 50%,
-    rgb(0, 0, 0)
-  );
-  z-index: -7;
+.col {
+  width: 30%; /* Column width */
 }
 
-.backdrop {
-  z-index: -5;
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  mask-image: linear-gradient(
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 
+h3 {
+  font-size: 1.2rem; /* Larger font size for headings */
+}
+
+.social {
+  margin-top: 10px; /* Space between text and social icons */
+}
+
+.social .link {
+  width: 30px; /* Size of social icons */
+  height: 30px;
+  background-color: #666; /* Dark gray background */
+  border-radius: 50%; /* Circle shape */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px; /* Space between social icons */
+}
+
+.social .link img {
+  width: 100%; /* Make social icons fill their containers */
+}
+
+ul {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+}
+
+ul li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+ul li a {
+  color: #ddd; /* Light text color for links */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+ul li a:hover {
+  color: #fff; /* White text color on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px); /* Adjust card width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
