@@ -1,0 +1,3 @@
+how to use:
+Method #1): copy and paste this onto a new script on tampermonkey
+Method #2): press "Ctrl + shift + I" to the console 
