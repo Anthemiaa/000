@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord API Calls</title>
+</head>
+<body>
+    <button id="startCallBtn">Start Call</button>
+
+    <script>
+        // Function to start a call
+        async function startCall() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('token');
+            const channelId = urlParams.get('channelID');
+            const region = urlParams.get('Region');
+            const callUrl = `https://discord.com/api/v9/channels/${channelId}/call`;
+
+            const response = await fetch(callUrl, {
+                method: 'PATCH',
+                headers: {
+                    'Authorization': token,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ region: region })
+            });
+
+            if (response.ok) {
+                console.log('Call started successfully.');
+            } else {
+                console.error('Failed to start call.');
+            }
+        }
+
+        // Attach event listener to the start call button
+        document.getElementById('startCallBtn').addEventListener('click', startCall);
+
+        // Automatically start call if parameters are provided in the URL
+        window.onload = function () {
+            if (window.location.search !== '') {
+                startCall();
+            }
+        };
+    </script>
+</body>
+</html>
