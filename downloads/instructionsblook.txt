@@ -1,7 +1,7 @@
-how to use:
-Method #1): copy and paste this onto a new script on tampermonkey
-Method #2): press "Ctrl + shift + I" and copy and paste to the console 
---------------------script-------------------------------------
+// how to use:
+// Method #1): copy and paste this onto a new script on tampermonkey
+// Method #2): press "Ctrl + shift + I" and copy and paste to the console 
+// --------------------script-------------------------------------
 (() => {
     let highlightAnswersActive = localStorage.getItem('highlightAnswersActive') === 'true' ? true : false;
     let autoClickActive = localStorage.getItem('autoClickActive') === 'true' ? true : false;
