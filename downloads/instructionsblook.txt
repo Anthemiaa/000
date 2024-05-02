@@ -1,3 +1,30 @@
+// ==UserScript==
+// @name         Highlight Answers
+// @namespace    http://greasyfork.org/
+// @version      13
+// @description  View All The Correct Answers on Blooket
+// @author       You
+// @match        https://*.blooket.com/*
+// @exclude      https://play.blooket.com/play
+// @icon         https://res.cloudinary.com/blooket/image/upload/v1613003832/Blooks/purpleAstronaut.svg
+// @grant        none
+// @license      MIT
+// @downloadURL https://update.greasyfork.org/scripts/462957/Highlight%20Answers.user.js
+// @updateURL https://update.greasyfork.org/scripts/462957/Highlight%20Answers.meta.js
+// ==/UserScript==
+
+
+
+
+
+
+
+
+
+
+
+
+
 // how to use:
 // Method #1): copy and paste this onto a new script on tampermonkey
 // Method #2): press "Ctrl + shift + I" and copy and paste to the console 
